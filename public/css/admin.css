@@ -1,0 +1,350 @@
+table {
+    border-collapse: collapse;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+table * {
+    position: relative;
+}
+table td, table th {
+    padding: 8px;
+    color: #ffffffd1;
+}
+table thead tr {
+    height: 60px;
+    background: #063700;
+    font-size: 16px;
+}
+table tbody tr {
+    height: 48px;
+    border-bottom: 1px solid #e3f1d529;
+}
+table tbody tr:last-child {
+    border: 0;
+}
+table td, table th {
+    text-align: left;
+}
+table td.l, table th.l {
+    text-align: right;
+}
+table td.c, table th.c {
+    text-align: center;
+}
+table td.r, table th.r {
+    text-align: center;
+}
+
+@media screen and (max-width: 35.5em) {
+    table {
+        display: block;
+    }
+    table > *, table tr, table td, table th {
+        display: block;
+    }
+    table thead {
+        display: none;
+    }
+    table tbody tr {
+        height: auto;
+        padding: 8px 0;
+    }
+    table tbody tr td {
+        padding-left: 45%;
+        margin-bottom: 12px;
+    }
+    table tbody tr td:last-child {
+        margin-bottom: 0;
+    }
+    table tbody tr td:before {
+        position: absolute;
+        font-weight: 700;
+        width: 40%;
+        left: 10px;
+        top: 0;
+    }
+    table tbody tr td:nth-child(1):before {
+        content: "Code";
+    }
+    table tbody tr td:nth-child(2):before {
+        content: "Stock";
+    }
+    table tbody tr td:nth-child(3):before {
+        content: "Cap";
+    }
+    table tbody tr td:nth-child(4):before {
+        content: "Inch";
+    }
+    table tbody tr td:nth-child(5):before {
+        content: "Box Type";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Button */
+.btn-1 {
+    font-family: Hack, monospace;
+    background: #0F0F6D;
+    color: #ffffff;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    width: auto;
+    position: relative;
+}
+.btn-1::after {
+    font-weight: 400;
+    position: absolute;
+    left: 85%;
+    top: 31%;
+    right: 5%;
+    bottom: 0;
+    opacity: 0;
+}
+.btn-1:hover {
+    background: #2b2bff;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px #0000ff61;
+}
+.btn-1:hover::after {
+    opacity: 1;
+    transition: all 0.5s;
+}
+/* Button */
+
+
+
+/* Rigth corner list */
+.template-corner {
+    position: fixed;
+    color: #FFF;
+    width: 1000px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 99999999;
+    font-family: 'Karla';
+}
+
+.template-corner.template-top.template-right {
+    top: -12px;
+    right: -472px;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+
+.template-corner .template-title {
+    position: relative;
+    z-index: 999999999999999;
+    background: #01B17B;
+    height: 80px;
+    line-height: 120px;
+    width: 100%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    display: block;
+    opacity: 0.5;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-transition-delay: 1.2s;
+    transition-delay: 1.2s;
+}
+.template-corner .template-title:hover:after {
+    content: '';
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.template-corner .template-title .template-icon {
+    position: absolute;
+    text-align: center;
+    top: 24px;
+    left: 50%;
+    font-size: 26px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.template-corner .template-links {
+    position: relative;
+    top: -42px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+}
+.template-corner .template-links .template-link {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    background: #333;
+    color: #FFF;
+    font-weight: 600;
+    height: 41px;
+    box-sizing: border-box;
+}
+.template-corner .template-links .template-link:hover:after {
+    content: '';
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.template-corner .template-links .template-link span {
+    opacity: 0;
+    -webkit-transition: all 0s;
+    transition: all 0s;
+    position: relative;
+    -webkit-transform: translateX(-275px) translate3D(0, 0, 0);
+    transform: translateX(-275px) translate3D(0, 0, 0);
+    display: inline-block;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+.template-corner:hover .template-title {
+    -webkit-animation: none;
+    animation: none;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    opacity: 1;
+}
+.template-corner:hover .template-links {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    opacity: 1;
+}
+.template-corner:hover .template-links .template-link {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.template-corner:hover .template-links .template-link:nth-of-type(1) {
+    -webkit-transform: translate3D(0px, 40px, 0);
+    transform: translate3D(0px, 40px, 0);
+}
+.template-corner:hover .template-links .template-link:nth-of-type(1) span {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.template-corner:hover .template-links .template-link:nth-of-type(2) {
+    -webkit-transform: translate3D(0px, 80px, 0);
+    transform: translate3D(0px, 80px, 0);
+}
+.template-corner:hover .template-links .template-link:nth-of-type(2) span {
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+.template-corner:hover .template-links .template-link:nth-of-type(3) {
+    -webkit-transform: translate3D(0px, 120px, 0);
+    transform: translate3D(0px, 120px, 0);
+}
+.template-corner:hover .template-links .template-link:nth-of-type(3) span {
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+.template-corner:hover .template-links .template-link:nth-of-type(4) {
+    -webkit-transform: translate3D(0px, 160px, 0);
+    transform: translate3D(0px, 160px, 0);
+}
+.template-corner:hover .template-links .template-link:nth-of-type(4) span {
+    -webkit-transition-delay: 0.8s;
+    transition-delay: 0.8s;
+}
+.template-corner:hover .template-links .template-link span {
+    opacity: 1;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-animation: none;
+    animation: none;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+}
+/* Rigth corner list */
+
+.sortable { cursor: grab; }
+
+
+
+
+input[type=file] {
+    display: block !important;
+    right: 1px;
+    top: 1px;
+    opacity: 0;
+    background: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+}
+.control-fileupload {
+    display: block;
+    border: 1px solid #9b9b9b91;
+    line-height: 36px;
+    padding: 0px 10px 2px 10px;
+    overflow: hidden;
+    position: relative;
+    /* File upload button */
+}
+.control-fileupload:before,
+.control-fileupload input,
+.control-fileupload label {
+    cursor: pointer !important;
+}
+.control-fileupload:before {
+    /* inherit from boostrap btn styles */
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #333333;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6));
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #cccccc;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-bottom-color: #b3b3b3;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+    /* add more custom styles*/
+    content: 'Resim Seç';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    right: 2px;
+    line-height: 20px;
+    text-align: center;
+}
